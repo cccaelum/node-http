@@ -1,9 +1,11 @@
-const http = require('node:http');
+//SSR: Server Side Rendering
+
+const http = require('node:http'); //con este protocolo enganchamos parte del cliente con la parte del servidor 
 const data = require('./data.js');
 
 const server = http.createServer((req, res) => {
-  res.writeHead(200, { 'Content-Type': 'text/html' });
-  res.end(`
+  res.writeHead(200, { 'Content-Type': 'text/html' }); //no hace falta realmente, es buena practica ponerlo
+  res.end(` 
     <!DOCTYPE html>
     <html lang="es">
       <head>
